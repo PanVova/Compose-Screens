@@ -21,7 +21,6 @@ import androidx.compose.ui.unit.dp
 import com.panvova.compose.R.string
 
 @Composable
-@Preview(name = "Preview3", device = Devices.PIXEL, showSystemUi = true)
 fun WeatherListItem(@PreviewParameter(WeatherProvider::class) weather: Weather) {
   Row(modifier = Modifier.padding(top = 10.dp)) {
     Image(
