@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.dp
 import com.panvova.compose.R.string
 import com.panvova.compose.ui.theme.Typography
 
-@Preview(name = "Weather list", device = Devices.PIXEL, showSystemUi = true)
+@Preview(name = "Weather screen", device = Devices.PIXEL, showSystemUi = true)
 @Composable
 fun WeatherScreen() {
   Title()
@@ -35,7 +35,7 @@ fun Title() {
 fun WeatherList() {
   val weatherList = remember { WeatherProvider.weatherList }
   LazyColumn(
-    contentPadding = PaddingValues(horizontal = 8.dp, vertical = 50.dp)
+    contentPadding = PaddingValues(horizontal = 16.dp, vertical = 50.dp)
   ) {
     items(
       items = weatherList,
