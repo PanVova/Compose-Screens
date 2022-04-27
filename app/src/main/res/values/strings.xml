@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">Compose</string>
-  <string name="chicago">Chicago</string>
+  <string name="app_name">Compose</string>
   <string name="minTemp">Weather min temp: %d</string>
   <string name="maxTemp">Weather average temp: %d</string>
   <string name="averageTemp">Weather max temp: %d</string>
