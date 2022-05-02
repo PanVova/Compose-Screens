@@ -1,4 +1,4 @@
-package com.panvova.compose.weather
+package com.panvova.compose.screens.weather
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column

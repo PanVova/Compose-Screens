@@ -1,4 +1,4 @@
-package com.panvova.compose.weather
+package com.panvova.compose.screens.weather
 
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import com.panvova.compose.R.drawable

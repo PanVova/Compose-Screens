@@ -1,4 +1,4 @@
-package com.panvova.compose.weather
+package com.panvova.compose.screens.weather
 
 data class Weather(
   val image: Int,
