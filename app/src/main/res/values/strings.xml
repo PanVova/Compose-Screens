@@ -4,4 +4,6 @@
   <string name="maxTemp">Weather average temp: %d</string>
   <string name="averageTemp">Weather max temp: %d</string>
   <string name="weather_list">Weather list</string>
+  <string name="question_favourite_superhero">What is your favourite superhero ?</string>
+  <string name="current_happiness">Current value of happiness:</string>
 </resources>
