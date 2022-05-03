@@ -14,6 +14,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Button
+import androidx.compose.material.OutlinedButton
 import androidx.compose.material.RadioButton
 import androidx.compose.material.Slider
 import androidx.compose.material.SnackbarHost
@@ -104,7 +105,7 @@ fun HappinessSlider() {
 fun PrettyButton() {
   val snackbarHostState = remember { SnackbarHostState() }
   val coroutineScope = rememberCoroutineScope()
-  Button(onClick = {
+  OutlinedButton(onClick = {
     coroutineScope.launch {
       snackbarHostState.showSnackbar(message = "This is a Snackbar")
     }
