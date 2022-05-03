@@ -91,12 +91,17 @@ fun HappinessSlider() {
   var selected by remember { mutableStateOf(10.00F) }
   val happinessColors = HappinessSliderImpl()
 
-  Slider(
-    value = selected,
-    onValueChange = { value -> selected = value },
-    colors = happinessColors,
-    modifier = Modifier.width(200.dp)
-  )
+  Row() {
+    Text("1")
+    Slider(
+      value = selected,
+      onValueChange = { value -> selected = value },
+      colors = happinessColors,
+      modifier = Modifier.width(200.dp)
+    )
+    Text("100")
+  }
+
 
   Text(stringResource(string.current_happiness))
 }
