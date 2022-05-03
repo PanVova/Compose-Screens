@@ -5,6 +5,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
@@ -57,7 +58,8 @@ fun WeatherListItem(@PreviewParameter(WeatherProvider::class) weather: Weather) 
 
   Row(modifier = Modifier
     .padding(top = 10.dp)
-    .clickable { showDialog = true }) {
+    .clickable { showDialog = true }
+    .fillMaxWidth()) {
     Image(
       painter = painterResource(id = weather.image),
       contentDescription = null,
