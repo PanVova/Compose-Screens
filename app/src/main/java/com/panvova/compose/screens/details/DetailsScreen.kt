@@ -102,7 +102,6 @@ fun HappinessSlider() {
     Text("100")
   }
 
-
   Text(stringResource(string.current_happiness))
 }
 
