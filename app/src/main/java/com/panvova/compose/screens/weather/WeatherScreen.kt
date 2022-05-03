@@ -60,18 +60,18 @@ fun WeatherListItem(@PreviewParameter(WeatherProvider::class) weather: Weather) 
       modifier = Modifier.padding(start = 10.dp)
     ) {
       Text(text = weather.place, style = MaterialTheme.typography.h6)
-      Text(
-        text = stringResource(string.minTemp, weather.minTemp),
-        style = MaterialTheme.typography.caption
-      )
-      Text(
-        text = stringResource(string.maxTemp, weather.maxTemp),
-        style = MaterialTheme.typography.caption
-      )
-      Text(
-        text = stringResource(string.averageTemp, weather.averageTemp),
-        style = MaterialTheme.typography.caption
-      )
+
+      TemperatureText(stringResource(string.minTemp, weather.minTemp))
+      TemperatureText(stringResource(string.maxTemp, weather.maxTemp))
+      TemperatureText(stringResource(string.averageTemp, weather.averageTemp))
     }
   }
+}
+
+@Composable
+private fun TemperatureText(text: String) {
+  Text(
+    text = text,
+    style = MaterialTheme.typography.caption
+  )
 }
