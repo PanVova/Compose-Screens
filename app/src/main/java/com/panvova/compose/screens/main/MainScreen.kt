@@ -12,6 +12,7 @@ import androidx.compose.material.icons.filled.Call
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Face
 import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -20,6 +21,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavController
 import com.panvova.compose.R.string
 import com.panvova.compose.navigation.Screen.ComplexScreen1
+import com.panvova.compose.navigation.Screen.ComplexScreen2
 import com.panvova.compose.navigation.Screen.DetailsScreen
 import com.panvova.compose.screens.weather.WeatherScreen
 
@@ -53,6 +55,13 @@ fun TopAppBar(navController: NavController) {
           contentDescription = null
         )
       }
+
+      IconButton(onClick = { navController.navigate(ComplexScreen2.route) }) {
+        Icon(
+          Icons.Filled.Home,
+          contentDescription = null
+        )
+      }
     }
   )
 }
@@ -71,7 +80,6 @@ fun BottomAppBar() {
 
       BottomNavigationItem(
         icon = {
-
           Icon(imageVector = imageVector, contentDescription = null)
         },
         label = {
