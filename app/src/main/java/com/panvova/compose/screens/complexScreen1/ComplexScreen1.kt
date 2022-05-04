@@ -78,7 +78,6 @@ fun Dots() {
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun TitleState() {
-
   Canvas(modifier = Modifier
     .fillMaxSize()
     .pointerInteropFilter {
