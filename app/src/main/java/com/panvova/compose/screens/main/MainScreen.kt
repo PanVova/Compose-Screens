@@ -1,5 +1,6 @@
 package com.panvova.compose.screens.main
 
+import androidx.compose.foundation.layout.Column
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.material.Scaffold
@@ -10,6 +11,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavController
 import com.panvova.compose.R.drawable
 import com.panvova.compose.R.string
+import com.panvova.compose.navigation.Screen.ComplexScreen1
 import com.panvova.compose.navigation.Screen.DetailsScreen
 import com.panvova.compose.screens.weather.WeatherScreen
 
@@ -28,10 +30,21 @@ fun TopAppBar(navController: NavController) {
     title = { Text(stringResource(string.weather_list)) },
     actions = {
       IconButton(onClick = { navController.navigate(DetailsScreen.route) }) {
-        Icon(
-          painter = painterResource(drawable.ic_launcher_foreground),
-          contentDescription = null
-        )
+        Column() {
+          Icon(
+            painter = painterResource(drawable.ic_launcher_foreground),
+            contentDescription = null
+          )
+        }
+      }
+
+      IconButton(onClick = { navController.navigate(ComplexScreen1.route) }) {
+        Column() {
+          Icon(
+            painter = painterResource(drawable.ic_launcher_background),
+            contentDescription = null
+          )
+        }
       }
     }
   )
