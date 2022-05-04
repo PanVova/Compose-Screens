@@ -15,6 +15,11 @@ import androidx.compose.material.AlertDialog
 import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.Create
+import androidx.compose.material.icons.filled.ShoppingCart
+import androidx.compose.material.icons.filled.Warning
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -57,17 +62,16 @@ fun WeatherListItem(@PreviewParameter(WeatherProvider::class) weather: Weather) 
   val onPopupDismissed = { showDialog = false }
 
   Row(modifier = Modifier
-    .padding(top = 10.dp)
+    .padding(top = 15.dp)
     .clickable { showDialog = true }
     .fillMaxWidth()) {
     Image(
-      painter = painterResource(id = weather.image),
+      Icons.Filled.CheckCircle,
       contentDescription = null,
       contentScale = ContentScale.Crop,
       modifier = Modifier
-        .size(64.dp)
+        .size(60.dp)
         .padding(bottom = 10.dp)
-        .clip(CircleShape)
     )
     Column(
       modifier = Modifier.padding(start = 10.dp)

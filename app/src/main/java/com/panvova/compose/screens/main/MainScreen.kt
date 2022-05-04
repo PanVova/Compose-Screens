@@ -10,14 +10,14 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Build
 import androidx.compose.material.icons.filled.Call
 import androidx.compose.material.icons.filled.Email
+import androidx.compose.material.icons.filled.Face
 import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavController
-import com.panvova.compose.R.drawable
 import com.panvova.compose.R.string
 import com.panvova.compose.navigation.Screen.ComplexScreen1
 import com.panvova.compose.navigation.Screen.DetailsScreen
@@ -42,14 +42,14 @@ fun TopAppBar(navController: NavController) {
     actions = {
       IconButton(onClick = { navController.navigate(DetailsScreen.route) }) {
         Icon(
-          painter = painterResource(drawable.ic_launcher_foreground),
+          Icons.Filled.Info,
           contentDescription = null
         )
       }
 
       IconButton(onClick = { navController.navigate(ComplexScreen1.route) }) {
         Icon(
-          painter = painterResource(drawable.ic_launcher_background),
+          Icons.Filled.Face,
           contentDescription = null
         )
       }
