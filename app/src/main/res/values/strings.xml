@@ -6,4 +6,8 @@
   <string name="weather_list">Weather list</string>
   <string name="question_favourite_superhero">What is your favourite superhero ?</string>
   <string name="current_happiness">Current value of happiness:</string>
+  <string name="ride_complete">Ride complete!</string>
+  <string name="please_rate_ride">Please rate your last ride</string>
+  <string name="tom_holland">Tom Holland</string>
+  <string name="leave_feedback">Leave your feedback</string>
 </resources>
