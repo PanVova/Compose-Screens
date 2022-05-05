@@ -14,6 +14,9 @@ import androidx.compose.material.icons.filled.Face
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.KeyboardArrowUp
+import androidx.compose.material.icons.filled.Send
+import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.graphics.Color
@@ -22,6 +25,9 @@ import androidx.navigation.NavController
 import com.panvova.compose.R.string
 import com.panvova.compose.navigation.Screen.ComplexScreen1
 import com.panvova.compose.navigation.Screen.ComplexScreen2
+import com.panvova.compose.navigation.Screen.ComplexScreen3
+import com.panvova.compose.navigation.Screen.ComplexScreen4
+import com.panvova.compose.navigation.Screen.ComplexScreen5
 import com.panvova.compose.navigation.Screen.DetailsScreen
 import com.panvova.compose.screens.weather.WeatherScreen
 
@@ -42,25 +48,20 @@ fun TopAppBar(navController: NavController) {
   androidx.compose.material.TopAppBar(
     title = { Text(stringResource(string.weather_list)) },
     actions = {
-      IconButton(onClick = { navController.navigate(DetailsScreen.route) }) {
-        Icon(
-          Icons.Filled.Info,
-          contentDescription = null
-        )
-      }
+      for (index in 0..5) {
+        val (icon, route) = when (index) {
+          0 -> Pair(Icons.Filled.Info, DetailsScreen.route)
+          1 -> Pair(Icons.Filled.Face, ComplexScreen1.route)
+          2 -> Pair(Icons.Filled.Home, ComplexScreen2.route)
+          3 -> Pair(Icons.Filled.ThumbUp, ComplexScreen3.route)
+          4 -> Pair(Icons.Filled.KeyboardArrowUp, ComplexScreen4.route)
+          5 -> Pair(Icons.Filled.Send, ComplexScreen5.route)
+          else -> Pair(Icons.Filled.Info, DetailsScreen.route)
+        }
 
-      IconButton(onClick = { navController.navigate(ComplexScreen1.route) }) {
-        Icon(
-          Icons.Filled.Face,
-          contentDescription = null
-        )
-      }
-
-      IconButton(onClick = { navController.navigate(ComplexScreen2.route) }) {
-        Icon(
-          Icons.Filled.Home,
-          contentDescription = null
-        )
+        IconButton(onClick = { navController.navigate(route) }) {
+          Icon(icon, contentDescription = null)
+        }
       }
     }
   )

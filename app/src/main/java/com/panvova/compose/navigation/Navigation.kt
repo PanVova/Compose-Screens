@@ -6,6 +6,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.panvova.compose.screens.complexScreen1.ComplexScreen1
 import com.panvova.compose.screens.complexScreen2.ComplexScreen2
+import com.panvova.compose.screens.complexScreen3.ComplexScreen3
+import com.panvova.compose.screens.complexScreen4.ComplexScreen4
+import com.panvova.compose.screens.complexScreen5.ComplexScreen5
 import com.panvova.compose.screens.details.DetailsScreen
 import com.panvova.compose.screens.main.MainScreen
 
@@ -24,6 +27,15 @@ fun Navigation() {
     }
     composable(route = Screen.ComplexScreen2.route) {
       ComplexScreen2()
+    }
+    composable(route = Screen.ComplexScreen3.route) {
+      ComplexScreen3()
+    }
+    composable(route = Screen.ComplexScreen4.route) {
+      ComplexScreen4()
+    }
+    composable(route = Screen.ComplexScreen5.route) {
+      ComplexScreen5()
     }
   }
 }
