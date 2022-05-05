@@ -93,11 +93,11 @@ fun ComplexScreen3() {
         .padding(start = 60.dp, end = 60.dp),
       colors = ButtonDefaults.buttonColors(backgroundColor = Color.Blue)
     ) {
-      Text("Submit feedback", color = Color.White)
+      Text(stringResource(string.submit_feedback), color = Color.White)
     }
 
     TextButton(onClick = { }) {
-      Text("Skip feedback", color = Color.White)
+      Text(stringResource(string.skip_feedback), color = Color.White)
     }
 
   }

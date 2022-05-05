@@ -10,4 +10,6 @@
   <string name="please_rate_ride">Please rate your last ride</string>
   <string name="tom_holland">Tom Holland</string>
   <string name="leave_feedback">Leave your feedback</string>
+  <string name="submit_feedback">Submit feedback</string>
+  <string name="skip_feedback">Skip feedback</string>
 </resources>
