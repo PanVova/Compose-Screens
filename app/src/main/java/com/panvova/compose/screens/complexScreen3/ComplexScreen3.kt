@@ -87,7 +87,7 @@ fun ComplexScreen3() {
     TextFieldWithIcon()
 
     Button(
-      onClick = { /*TODO*/ },
+      onClick = { },
       modifier = Modifier
         .fillMaxWidth()
         .padding(start = 60.dp, end = 60.dp),
@@ -96,7 +96,7 @@ fun ComplexScreen3() {
       Text("Submit feedback", color = Color.White)
     }
 
-    TextButton(onClick = { /*TODO*/ }) {
+    TextButton(onClick = { }) {
       Text("Skip feedback", color = Color.White)
     }
 
