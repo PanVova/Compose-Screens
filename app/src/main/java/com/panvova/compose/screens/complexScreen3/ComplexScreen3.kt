@@ -169,7 +169,7 @@ fun TextFieldWithIcon() {
   var text by remember { mutableStateOf(TextFieldValue("")) }
   OutlinedTextField(
     value = text,
-    leadingIcon = { Icon(imageVector = Icons.Filled.Email, contentDescription = null) },
+    leadingIcon = { Icon(Icons.Filled.Email, contentDescription = null) },
     onValueChange = { text = it },
     label = { Text(stringResource(string.leave_feedback)) },
     placeholder = { Text(stringResource(string.leave_feedback)) },
